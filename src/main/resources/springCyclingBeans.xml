@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="roadBike" class="com.glenware.spring4.RoadBicycle" />
+
+	<bean id="roadCyclist" class="com.glenware.spring4.Cyclist">
+	    <property name="cyclingSong" value="I want to ride my bicycle, I want to ride my bike" />
+		<property name="bicycle" ref="roadBike" />
+	</bean>
+    
+    <bean id="mountainBike" class="com.glenware.spring4.MountainBicycle" />
+
+	<bean id="offroadCyclist" class="com.glenware.spring4.Cyclist">
+	    <property name="cyclingSong" value="I run around town, around round the round with the pedal to the met…. The pedal to whatever" />
+		<property name="bicycle" ref="mountainBike" />
+	</bean>
+
+</beans>
